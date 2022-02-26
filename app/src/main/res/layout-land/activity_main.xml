@@ -362,7 +362,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:background="@drawable/btnbackground"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:foreground="?attr/selectableItemBackground"
             android:onClick="trigSinBTNpush"
             android:text="@string/trigSinText"
             android:textAllCaps="false"
