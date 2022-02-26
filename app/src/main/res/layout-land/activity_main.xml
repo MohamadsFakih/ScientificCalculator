@@ -377,7 +377,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:background="@drawable/btnbackground"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:foreground="?attr/selectableItemBackground"
             android:onClick="trigCosBTNpush"
             android:text="@string/trigCosText"
             android:textAllCaps="false"
