@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/app_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/prevview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/displaytedittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.961"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <EditText
+        android:id="@+id/displaytedittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:longClickable="false"
+        android:hint="@string/resText"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/greyAccent"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnclear"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/clearbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="clearBtnPush"
+            android:text="@string/clearText"
+
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnpars1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="par1BtnPush"
+            android:text="@string/paropen"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btnclear"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnpars2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="par2BtnPush"
+            android:text="@string/parclosed"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btnpars1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btndiv"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="divBtnPush"
+            android:text="@string/divideText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn9"
+            app:layout_constraintTop_toBottomOf="@+id/btnback" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="sevenBtnPush"
+            android:text="@string/sevenText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnclear" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="eightBtnPush"
+            android:text="@string/eightText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn7"
+            app:layout_constraintTop_toBottomOf="@+id/btnpars1" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="nineBtnPush"
+            android:text="@string/nineText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn8"
+            app:layout_constraintTop_toBottomOf="@+id/btnpars2" />
+
+        <Button
+            android:id="@+id/btnmult"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="multBtnPush"
+            android:text="@string/multiplyText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn6"
+            app:layout_constraintTop_toBottomOf="@+id/btndiv" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="fourBtnPush"
+            android:text="@string/fourText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn7" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="fiveBtnPush"
+            android:text="@string/fiveText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn4"
+            app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="sixBtnPush"
+            android:text="@string/sixText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn5"
+            app:layout_constraintTop_toBottomOf="@+id/btn9" />
+
+        <Button
+            android:id="@+id/btnminus"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="subBtnPush"
+            android:text="@string/subtractText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn3"
+            app:layout_constraintTop_toBottomOf="@+id/btnmult" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="oneBtnPush"
+            android:text="@string/oneText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn4" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="twoBtnPush"
+            android:text="@string/TwoText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn1"
+            app:layout_constraintTop_toBottomOf="@+id/btn5" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="threeBtnPush"
+            android:text="@string/threeText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btn2"
+            app:layout_constraintTop_toBottomOf="@+id/btn6" />
+
+        <Button
+            android:id="@+id/btnplus"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arithbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="addBtnPush"
+            android:text="@string/addText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btnequal"
+            app:layout_constraintTop_toBottomOf="@+id/btnminus" />
+
+        <Button
+            android:id="@+id/btnzero"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="zeroBtnPush"
+            android:text="@string/zeroText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toStartOf="@+id/btn1"
+            app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+        <Button
+            android:id="@+id/btnpoint"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="pointBtnPush"
+            android:text="@string/pointText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btnzero"
+            app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+        <Button
+            android:id="@+id/btnequal"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/equalbtn"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="equalBtnPush"
+            android:text="@string/equalText"
+            android:textColor="@color/tanAccent"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/btnpoint"
+            app:layout_constraintTop_toBottomOf="@+id/btn3" />
+
+        <ImageButton
+            android:id="@+id/btnback"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/backspace"
+            android:onClick="backBtnPush"
+            android:textColor="@color/tanAccent"
+            app:layout_constraintEnd_toEndOf="@+id/btndiv"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/btnpars2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/backbtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigSinBTNpush"
+            android:text="@string/trigSinText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigCosBTNpush"
+            android:text="@string/trigCosText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigTanBTNpush"
+            android:text="@string/trigTanText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigArcSinBTNpush"
+            android:text="@string/trigArcSinText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigArcCosBTNpush"
+            android:text="@string/trigArcCosText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="trigArcTanBTNpush"
+            android:text="@string/trigArcTanText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="logBTNpush"
+            android:text="@string/LogText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="lnBTNpush"
+            android:text="@string/naturalLogText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="radBTNpush"
+            android:text="@string/squareRootText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button9"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="eBTNpush"
+            android:text="@string/eText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="piBTNpush"
+            android:text="@string/piText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button11"
+            app:layout_constraintTop_toBottomOf="@+id/button9" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="absBTNpush"
+            android:text="@string/absoluteValueText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button12"
+            app:layout_constraintTop_toBottomOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="primeBTNpush"
+            android:text="@string/isPrimeFunctionText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="squaredBTNpush"
+            android:text="@string/xSquaredText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button14"
+            app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btnbackground"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:onClick="powerBTNpush"
+            android:text="@string/xPowerYText"
+            android:textAllCaps="false"
+            android:textColor="@color/tanAccent"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/button15"
+            app:layout_constraintTop_toBottomOf="@+id/button13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
